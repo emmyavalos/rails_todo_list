@@ -1,0 +1,14 @@
+<h1>Emmy's Todo List</h1>
+<div>
+  <ol>
+    <% @todos.each do |todo| %>
+    <li>
+      <%= link_to todo.title, todo_path(todo) %>
+      <%= todo.description %>
+      <%= todo.complete %>
+    </li>
+    <% end %>
+  </ol>
+  <%= link_to "New Todo", new_todo_path %>
+  <%= link_to "Show this todo", new_todo_path %>
+</div>

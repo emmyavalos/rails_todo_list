@@ -1,0 +1,7 @@
+<h1><%= @todo.title %></h1>
+<p>Description: <%= @todo.description %></p>
+<p>Complete: <%= @todo.complete %></p>
+
+<%= link_to 'All Todos', todos_path %>
+<%= link_to 'Update Todo', edit_todo_path(@todo) %>
+<%= link_to 'Delete', todo_path(@todo), method: :delete %>
